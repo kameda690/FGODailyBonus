@@ -1,0 +1,18 @@
+name: FGO Daily Bonus
+
+on:
+  schedule:
+    - cron: 0 4 * * * # UTC時間で04:00に実行
+
+jobs:
+  daily-bonus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # FGO Daily Bonusの実行スクリプトをここに追加
+      - name: Run FGO Daily Bonus Script
+        run: |
+          # スクリプトの実行コマンドをここに記述
+          # 例: python daily_bonus.py
